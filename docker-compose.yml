@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    container_name: sqldb
+    hostname: sqldb
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=AdinApp2022!
+    ports:
+      - 1433:1433
+    networks:
+      adin_network:
+        aliases:
+          - sqldb  
+    volumes:
+      - sql_data_volume:/var/opt/mssql
+
+  adin_api:
+    build: 
+      context: ./adin_api
+      dockerfile: ./adin_api/adin_api/Dockerfile
+    container_name: adin-api
+    ports:
+      - 8000:80
+      - 8001:443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=AdinApp2022!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/adin_api.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro  
+    depends_on:
+      - db  
+    networks:
+      adin_network:
+        aliases:
+          - adin-api
+
+networks:
+  adin_network:
+
+volumes: 
+  sql_data_volume:
