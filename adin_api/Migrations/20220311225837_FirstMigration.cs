@@ -230,7 +230,8 @@ namespace adin_api.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     step_number = table.Column<int>(type: "integer", nullable: false),
                     instructions = table.Column<string>(type: "VARCHAR(1000)", nullable: true),
-                    task_id = table.Column<int>(type: "integer", nullable: false)
+                    task_id = table.Column<int>(type: "integer", nullable: false),
+                    rack_id = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
