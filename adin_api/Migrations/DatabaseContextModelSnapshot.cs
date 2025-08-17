@@ -377,6 +377,10 @@ namespace adin_api.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("step_number");
 
+                    b.Property<int?>("RackId")
+                        .HasColumnType("integer")
+                        .HasColumnName("rack_id");
+
                     b.Property<int>("TaskId")
                         .HasColumnType("integer")
                         .HasColumnName("task_id");

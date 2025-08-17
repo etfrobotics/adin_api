@@ -16,6 +16,8 @@ namespace adin_api.DTOs
         [Required]
         public string Instructions { get; set; }
 
+        public int? RackId { get; set; }
+
         [Required]
         public int TaskId { get; set; }
 
