@@ -17,6 +17,9 @@ namespace adin_api.Data.Models
         [Column("instructions", TypeName = "VARCHAR(1000)")]
         public string Instructions { get; set; }
 
+        [Column("rack_id")]
+        public int? RackId { get; set; }
+
         [Column("task_id")]
         public int TaskId { get; set; }
         public Task Task { get; set; }
