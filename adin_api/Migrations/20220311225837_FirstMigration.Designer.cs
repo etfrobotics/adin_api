@@ -395,42 +395,48 @@ namespace adin_api.Migrations
                             Id = 1,
                             Instructions = "Step 1 of task 1",
                             StepNumber = 1,
-                            TaskId = 1
+                            TaskId = 1,
+                            RackID = 1
                         },
                         new
                         {
                             Id = 2,
                             Instructions = "Step 2 of task 1",
                             StepNumber = 2,
-                            TaskId = 1
+                            TaskId = 1,
+                            RackID = 2
                         },
                         new
                         {
                             Id = 3,
                             Instructions = "Step 3 of task 1",
                             StepNumber = 3,
-                            TaskId = 1
+                            TaskId = 1,
+                            RackID = 3
                         },
                         new
                         {
                             Id = 4,
                             Instructions = "Step 1 of task 2",
                             StepNumber = 1,
-                            TaskId = 2
+                            TaskId = 2,
+                            RackID = 4
                         },
                         new
                         {
                             Id = 5,
                             Instructions = "Step 1 of task 3",
                             StepNumber = 1,
-                            TaskId = 3
+                            TaskId = 3,
+                            RackID = 5
                         },
                         new
                         {
                             Id = 6,
                             Instructions = "Step 2 of task 3",
                             StepNumber = 2,
-                            TaskId = 3
+                            TaskId = 3,
+                            RackID = 6
                         });
                 });
 

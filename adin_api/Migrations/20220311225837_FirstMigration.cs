@@ -425,15 +425,15 @@ namespace adin_api.Migrations
 
             migrationBuilder.InsertData(
                 table: "Steps",
-                columns: new[] { "id", "instructions", "step_number", "task_id" },
+                columns: new[] { "id", "instructions", "step_number", "task_id","rack_id" },
                 values: new object[,]
                 {
-                    { 1, "Step 1 of task 1", 1, 1 },
-                    { 2, "Step 2 of task 1", 2, 1 },
-                    { 3, "Step 3 of task 1", 3, 1 },
-                    { 4, "Step 1 of task 2", 1, 2 },
-                    { 5, "Step 1 of task 3", 1, 3 },
-                    { 6, "Step 2 of task 3", 2, 3 }
+                    { 1, "Step 1 of task 1", 1, 1, 1},
+                    { 2, "Step 2 of task 1", 2, 1, 2},
+                    { 3, "Step 3 of task 1", 3, 1, 3},
+                    { 4, "Step 1 of task 2", 1, 2, 4},
+                    { 5, "Step 1 of task 3", 1, 3, 5},
+                    { 6, "Step 2 of task 3", 2, 3, 6}
                 });
 
             migrationBuilder.InsertData(
