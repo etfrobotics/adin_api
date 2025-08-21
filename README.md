@@ -20,7 +20,7 @@ ADIN API is an ASP.NET Core 5.0 Web API for managing maintenance tasks and the r
 
 ### 1. Clone
 ```bash
-git clone <repo-url>
+git clone https://github.com/etfrobotics/adin_api
 cd adin_api
 ```
 
@@ -41,13 +41,12 @@ dotnet build
 dotnet ef database update
 dotnet run --project adin_api
 ```
-Access API at `http://localhost:5000` and Swagger at `/swagger`.
 
 ### 4. Run with Docker Compose
 ```bash
 docker-compose up --build
 ```
-API available at `http://localhost:8000`.
+API available at `http://localhost:8001`.
 
 ### 5. Host Local Files
 Create a folder named `files` on your PC. Place any static assets inside and ensure the API is configured to serve this folder (see documentation). The contents will then be available from the API at `/files`.
