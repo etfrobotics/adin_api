@@ -17,6 +17,7 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.FileProviders;
 
 namespace adin_api
 {
@@ -71,7 +72,7 @@ namespace adin_api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                
+
             }
 
             app.UseSwagger();
@@ -87,6 +88,12 @@ namespace adin_api
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider("/app/files"),
+                RequestPath = "/files"
+            });
 
             app.UseEndpoints(endpoints =>
             {
