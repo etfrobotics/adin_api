@@ -1,0 +1,3 @@
+site_name: ADIN API Docs
+nav:
+  - Home: index.md
